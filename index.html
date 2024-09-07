@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credential Query</title>
+</head>
+<body>
+    <h1>Credential Query</h1>
+    <pre id="json-content"></pre>
+    <script>
+        const data = {
+            "circuitId": "credentialAtomicQuerySigV2",
+            "id": 1725712251,
+            "query": {
+                "allowedIssuers": ["*"],
+                "context": "ipfs://QmTkDiF5tBUkPZYpc2GVByKy3fbxz9D9BqsFCfk2HUKT9B",
+                "type": "Chefverification",
+                "credentialSubject": {
+                    "Code": {
+                        "$in": [39, 45, 54, 90]
+                    }
+                }
+            }
+        };
+
+        document.getElementById('json-content').textContent = JSON.stringify(data, null, 2);
+    </script>
+</body>
+</html>
+
